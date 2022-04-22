@@ -16,11 +16,9 @@ import { useEffect, useState } from "react";
 import ChatItem from "./ChatItem";
 import { useRouter } from "next/router";
 import Switch from "react-switch";
-import { useTheme } from "next-themes";
 
 const Sidebar = () => {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
   const { user } = useAuth();
   const [chats, setChats] = useState(null);
   const [dark, setDark] = useState(false);
