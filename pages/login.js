@@ -9,7 +9,7 @@ const Login = ({ signIn }) => {
         <title>Login</title>
       </Head>
       <div
-        className=" bg-slate-50 w-3/5 h-3/5 shadow-lg flex 
+        className=" bg-slate-50 w-[90vw] sm:w-3/5 h-3/5 shadow-lg flex 
       flex-col justify-center items-center "
       >
         <h2 className="text-5xl mb-6">G - Chat</h2>

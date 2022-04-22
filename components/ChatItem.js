@@ -32,7 +32,7 @@ const ChatItem = ({ users, userEmail, id }) => {
       onClick={eneterChat}
     >
       <Avatar src={recUserInfo.length > 0 ? recUserInfo[0].photoUrl : null}>
-        {receipientEmail.charAt(0).toUpperCase()}
+        {receipientEmail?.charAt(0).toUpperCase()}
       </Avatar>
       <p className="ml-2">{receipientEmail}</p>
     </div>

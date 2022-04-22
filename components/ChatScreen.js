@@ -88,13 +88,10 @@ const ChatScreen = ({ receipientEmail }) => {
   };
 
   return (
-    <div
-      className="flex-1 h-screen relative "
-      style={{ backgroundColor: "#e5ded8" }}
-    >
+    <div className="flex-1   h-full " style={{ backgroundColor: "#e5ded8" }}>
       <div
         className="flex items-center justify-between p-7 
-      border-b-2 border-b-slate-100 sticky z-10 h-4 bg-white"
+      border-b-2 border-b-slate-100 sticky z-10 top-0 h-4 bg-white"
       >
         <div className="flex items-center">
           <Avatar
@@ -124,20 +121,23 @@ const ChatScreen = ({ receipientEmail }) => {
         </div>
       </div>
       {/* .......................................................... */}
-      <div className="h-5/6 p-8">
+      <div className="h-5/6 p-8 ">
         {messages.map((item) => (
           <Message key={item.id} item={item} />
         ))}
       </div>
 
       {/* ......................................................... */}
-      <form className="flex dark:bg-slate-900 bg-white p-2 absolute z-50 bottom-0 right-0 left-0 items-center">
+      <form
+        className="flex  bg-white p-2 sticky z-50 bottom-0 right-0
+      w-full  items-center"
+      >
         <InsertEmoticon />
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type="text"
-          className="flex-1 bg-gray-200 dark:bg-black  mx-1 p-2 rounded-sm outline-none"
+          className="flex-1 bg-gray-200   mx-1 p-2 rounded-sm outline-none"
         />
 
         <IconButton disabled={!input} onClick={sendMessage}>

@@ -6,7 +6,7 @@ const Message = ({ item }) => {
   return (
     <p
       className={`w-fit min-w-6  p-2 px-2 pb-4 relative my-2 text-lg text-right
-      rounded-xl rounded-br-none dark:bg-black
+      rounded-xl rounded-br-none 
      ${item.user === user.email ? "ml-auto bg-blue-300" : "bg-gray-300"} `}
     >
       {item.message}
