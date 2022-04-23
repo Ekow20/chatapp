@@ -64,7 +64,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-screen overflow-y-scroll  min-w-[250px]">
+    <div className="h-screen overflow-y-scroll bg-white min-w-[250px]">
       <div
         className="flex items-center justify-between px-4 py-7 
       border-b-2 border-b-slate-100 sticky z-10 bg-white h-4 top-0"

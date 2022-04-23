@@ -12,7 +12,7 @@ const Login = ({ signIn }) => {
         className=" bg-slate-50 w-[90vw] sm:w-3/5 h-3/5 shadow-lg flex 
       flex-col justify-center items-center "
       >
-        <h2 className="text-5xl mb-6">G - Chat</h2>
+        <h2 className="text-5xl mb-6 text-gray-900">G - Chat</h2>
         <Button
           variant="outlined"
           color="secondary"

@@ -88,7 +88,10 @@ const ChatScreen = ({ receipientEmail }) => {
   };
 
   return (
-    <div className="flex-1   h-full " style={{ backgroundColor: "#e5ded8" }}>
+    <div
+      className="text-black flex-1   h-full "
+      style={{ backgroundColor: "#e5ded8" }}
+    >
       <div
         className="flex items-center justify-between p-7 
       border-b-2 border-b-slate-100 sticky z-10 top-0 h-4 bg-white"
