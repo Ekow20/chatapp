@@ -89,7 +89,7 @@ const ChatScreen = ({ receipientEmail }) => {
 
   return (
     <div
-      className="text-black flex-1   h-full "
+      className="text-black flex-1 relative  h-full "
       style={{ backgroundColor: "#e5ded8" }}
     >
       <div
@@ -132,7 +132,7 @@ const ChatScreen = ({ receipientEmail }) => {
 
       {/* ......................................................... */}
       <form
-        className="flex  bg-white p-2 sticky z-50 bottom-0 right-0
+        className="flex  bg-white p-2 absolute z-50 bottom-0 right-0
       w-full  items-center"
       >
         <InsertEmoticon />

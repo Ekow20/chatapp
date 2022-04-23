@@ -64,7 +64,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-screen overflow-y-scroll bg-white min-w-[250px]">
+    <div className="h-screen overflow-y-scroll bg-white text-black min-w-[250px]">
       <div
         className="flex items-center justify-between px-4 py-7 
       border-b-2 border-b-slate-100 sticky z-10 bg-white h-4 top-0"
@@ -96,7 +96,7 @@ const Sidebar = () => {
         <Search />
         <input
           type="text"
-          className="flex-1 items-center px-1 border-none outline-none"
+          className="flex-1 items-center p-1 bg-gray-300 border-none outline-none"
           placeholder="Search In Chat"
         />
       </div>
