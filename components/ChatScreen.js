@@ -89,7 +89,7 @@ const ChatScreen = ({ receipientEmail }) => {
 
   return (
     <div
-      className="text-black flex-1 relative  h-full "
+      className="text-black flex-1 relative  h-screen "
       style={{ backgroundColor: "#e5ded8" }}
     >
       <div
