@@ -132,6 +132,7 @@ const ChatScreen = ({ receipientEmail }) => {
 
       {/* ......................................................... */}
       <form
+        onSubmit={sendMessage}
         className="flex  bg-white p-2 absolute z-50 bottom-0 right-0
       w-full  items-center"
       >

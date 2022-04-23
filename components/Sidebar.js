@@ -92,11 +92,11 @@ const Sidebar = () => {
         </div>
       </div>
       {/* ................................................ */}
-      <div className="flex p-5">
+      <div className="flex p-5 items-center">
         <Search />
         <input
           type="text"
-          className="flex-1 items-center p-1 bg-gray-300 border-none outline-none"
+          className="flex-1 items-center p-1 bg-gray-50 rounded border-none outline-none"
           placeholder="Search In Chat"
         />
       </div>
