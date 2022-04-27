@@ -119,9 +119,6 @@ const ChatScreen = ({ receipientEmail }) => {
 
         <div className="flex ">
           <IconButton>
-            <AttachFile />
-          </IconButton>
-          <IconButton>
             <MoreVert />
           </IconButton>
         </div>
