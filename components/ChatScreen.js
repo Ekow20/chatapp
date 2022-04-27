@@ -89,15 +89,10 @@ const ChatScreen = ({ receipientEmail }) => {
   };
 
   return (
-    <div
-      className={`text-black flex-1  sm:block ${
-        !chatOpen && "hidden"
-      } relative    `}
-      style={{ backgroundColor: "#e5ded8" }}
-    >
+    <div className={`text-black flex-1   sm:block ${!chatOpen && "hidden"} `}>
       <div
-        className="flex items-center justify-between p-7 
-      border-b-2 border-b-slate-100 sticky z-10 top-0 h-4 bg-white"
+        className="flex items-center justify-between py-7 sm:px-7 
+      border-b-2 border-b-slate-100 sticky z-10 top-0 h-[10%] bg-white"
       >
         <div className="flex items-center">
           <div className="sm:hidden mr-1">
@@ -132,7 +127,7 @@ const ChatScreen = ({ receipientEmail }) => {
         </div>
       </div>
       {/* .......................................................... */}
-      <div className=" h-[86vh] overflow-scroll p-8 ">
+      <div className=" h-[80%] bg-[#e5ded8] overflow-y-scroll p-8 ">
         {messages.map((item) => (
           <Message key={item.id} item={item} />
         ))}
@@ -141,7 +136,7 @@ const ChatScreen = ({ receipientEmail }) => {
       {/* ......................................................... */}
       <form
         onSubmit={sendMessage}
-        className="flex  bg-white p-2 absolute z-50 bottom-0 right-0
+        className="flex  bg-white p-2  z-50 h-[10%]  
       w-full  items-center"
       >
         <InsertEmoticon />
