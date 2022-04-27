@@ -5,6 +5,7 @@ import {
   MoreVert,
   InsertEmoticon,
   Send,
+  ArrowBack,
 } from "@material-ui/icons";
 import {
   addDoc,
@@ -89,7 +90,7 @@ const ChatScreen = ({ receipientEmail }) => {
 
   return (
     <div
-      className={`text-black flex-[2] sm:block ${
+      className={`text-black flex-1  sm:block ${
         !chatOpen && "hidden"
       } relative    `}
       style={{ backgroundColor: "#e5ded8" }}
@@ -99,9 +100,9 @@ const ChatScreen = ({ receipientEmail }) => {
       border-b-2 border-b-slate-100 sticky z-10 top-0 h-4 bg-white"
       >
         <div className="flex items-center">
-          <div className="sm:hidden">
+          <div className="sm:hidden mr-1">
             <IconButton onClick={() => setChatOpen(false)}>
-              <AttachFile />
+              <ArrowBack />
             </IconButton>
           </div>
           <Avatar

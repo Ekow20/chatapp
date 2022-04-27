@@ -67,7 +67,7 @@ const Sidebar = () => {
     <div
       className={`flex-1 bg-white sm:block ${
         chatOpen && "hidden"
-      }  text-black sm:max-w-[350px] overflow-y-scroll`}
+      }  text-black sm:max-w-[320px] overflow-y-scroll`}
     >
       <div
         className="flex items-center justify-between px-4 py-7 
