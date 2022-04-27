@@ -3,10 +3,12 @@ import { Avatar } from "@material-ui/core";
 import { useRouter } from "next/router";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "../Firebase";
+import useAuth from "../hooks/useAuth";
 
 const ChatItem = ({ users, userEmail, id }) => {
   const receipientEmail = users?.find((item) => item !== userEmail);
   const [recUserInfo, setRecUserInfo] = useState([]);
+  const { setChatOpen } = useAuth();
   useEffect(() => {
     if (receipientEmail) {
       const recQuery = query(
@@ -23,6 +25,7 @@ const ChatItem = ({ users, userEmail, id }) => {
   const router = useRouter();
 
   const eneterChat = () => {
+    setChatOpen(true);
     router.push(`/chat/${id}`);
   };
 

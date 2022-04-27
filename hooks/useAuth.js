@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [initLoad, setInitLoad] = useState(true);
+  const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
     const checkUser = onAuthStateChanged(auth, (user) => {
@@ -34,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{ user }}>
+    <Context.Provider value={{ user, setChatOpen, chatOpen }}>
       {user ? children : <Login signIn={signIn} />}
     </Context.Provider>
   );

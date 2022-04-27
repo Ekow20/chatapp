@@ -19,7 +19,7 @@ import Switch from "react-switch";
 
 const Sidebar = () => {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, chatOpen } = useAuth();
   const [chats, setChats] = useState(null);
   const [dark, setDark] = useState(false);
   const chatsRef = query(
@@ -64,7 +64,11 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-screen overflow-y-scroll bg-white text-black min-w-[250px]">
+    <div
+      className={`flex-1 bg-white sm:block ${
+        chatOpen && "hidden"
+      }  text-black sm:max-w-[350px] overflow-y-scroll`}
+    >
       <div
         className="flex items-center justify-between px-4 py-7 
       border-b-2 border-b-slate-100 sticky z-10 bg-white h-4 top-0"

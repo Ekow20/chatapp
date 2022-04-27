@@ -19,7 +19,7 @@ const ChatPage = () => {
   const receipientEmail = chatUsers?.find((item) => item !== user.email);
 
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <Sidebar />
       <ChatScreen receipientEmail={receipientEmail} />
     </div>

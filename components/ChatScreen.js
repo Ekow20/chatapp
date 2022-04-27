@@ -26,7 +26,7 @@ import Timeago from "timeago-react";
 
 const ChatScreen = ({ receipientEmail }) => {
   const [input, setInput] = useState("");
-  const { user } = useAuth();
+  const { user, setChatOpen, chatOpen } = useAuth();
   const router = useRouter();
   const [messages, setMessages] = useState([]);
   const [recUserInfo, setRecUserInfo] = useState([]);
@@ -89,7 +89,9 @@ const ChatScreen = ({ receipientEmail }) => {
 
   return (
     <div
-      className="text-black flex-1 relative  h-screen "
+      className={`text-black flex-[2] sm:block ${
+        !chatOpen && "hidden"
+      } relative    `}
       style={{ backgroundColor: "#e5ded8" }}
     >
       <div
@@ -97,6 +99,11 @@ const ChatScreen = ({ receipientEmail }) => {
       border-b-2 border-b-slate-100 sticky z-10 top-0 h-4 bg-white"
       >
         <div className="flex items-center">
+          <div className="sm:hidden">
+            <IconButton onClick={() => setChatOpen(false)}>
+              <AttachFile />
+            </IconButton>
+          </div>
           <Avatar
             className="cursor-pointer hover:opacity-80"
             src={recUserInfo.length > 0 ? recUserInfo[0].photoUrl : null}
@@ -124,7 +131,7 @@ const ChatScreen = ({ receipientEmail }) => {
         </div>
       </div>
       {/* .......................................................... */}
-      <div className="h-5/6 p-8 ">
+      <div className=" h-[86vh] overflow-scroll p-8 ">
         {messages.map((item) => (
           <Message key={item.id} item={item} />
         ))}
